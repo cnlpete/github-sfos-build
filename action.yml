@@ -1,0 +1,18 @@
+# action.yml
+name: 'Buildfish'
+description: 'Build SailfishOS apps with Docker'
+inputs:
+  release:
+    description: 'SailfishOS release (check https://hub.docker.com/r/coderus/sailfishos-platform-sdk/tags)'
+    required: true
+  arch:
+    description: 'Build arch (e.g. armv7hl, i486)'
+    default: 'armv7hl'
+
+outputs:
+  rpm: # id of output
+    description: '???'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
